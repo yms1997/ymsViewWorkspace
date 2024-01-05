@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      /* border: 5px solid black; */
+      display: flex;
+      width: 900px;
+      /* height: 200px; */
+    }
+    .box{
+      flex: 1; /* container에 대한 flex 비율 */
+      border: 3px solid red;
+      display: flex;
+    }
+    .box div{
+      height: 200px;
+    }
+    .box div:nth-child(1){
+      background-color: yellow;
+      flex: 1;
+    }
+    .box div:nth-child(2){
+      background-color: yellowgreen;
+      flex: 1;
+    }
+
+    @media(max-width:768px){
+      .container{
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="box">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="box">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+	    color : red
+    }
+    * {
+	    color: red;
+    }
+    div {
+	    color: yellow;
+    }
+    .text-class {
+	    color : rgb(56, 4, 114, 1);
+    }
+    #text-id {
+	    color :violet;
+      /* 1은 불투명 ~ 0에 가까울수록 투명 */
+      opacity: 0.22;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    바깥에 있는 박스입니다.
+    <div class="inner-box">
+      <p>안쪽에 있는 박스입니다.</p>
+    </div>
+  </div>
+  <div class="text-class" id="text-id">
+    텍스트 입니다.
+  </div>
+</body>
+</html>

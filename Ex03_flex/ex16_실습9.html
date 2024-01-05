@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    header{
+      /* flex: 0.1; */
+      height: 100px;
+      background-color: salmon;
+    }
+    section{
+      /* flex: 0.8; */
+      display: flex;
+      height: calc(100vh - 200px);
+    }
+    article{
+      flex: 5;
+      background-color: bisque;
+    }
+    aside{
+      flex: 3;
+      background-color: lightpink;
+    }
+    nav{
+      width: 100px;
+      background-color: mediumpurple;
+    }
+    footer{
+      /* flex: 0.1; */
+      height: 100px;
+      background-color: salmon;
+    }
+    header,article,aside,nav,footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 
+    [1] 콘텐츠 너비 width: 1200 - 1300px -> 100% 
+    [2] flex 박스 row -> flex-direction: cloumn 
+    */
+    @media(max-width:768px){
+      section{
+        flex-direction: column;
+      }
+      aside{
+        flex: 1;
+      }
+      nav{
+        flex: 2;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <section>
+      <article>Article</article>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+    </section>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

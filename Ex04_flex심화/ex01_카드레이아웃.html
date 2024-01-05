@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+    }
+    .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid pink;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+    }
+    .card img{
+      transition-duration: 0.5s;
+    }
+    .card img:hover{
+      transform: scale(1.1);
+    }
+    @media(max-width:768px){
+      .container{
+        height: 100vh;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Card #01</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur recusandae temporibus molestiae architecto perferendis accusamus ut mollitia consectetur. Magnam, saepe quidem soluta temporibus sit a porro id alias! Illum, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatum atque animi corporis ea dignissimos facere dolorem? Iste voluptatem cupiditate magni sapiente, obcaecati provident accusamus! Unde accusantium corporis voluptatem iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatibus neque adipisci laudantium eum omnis libero consequatur qui quasi maiores. Natus incidunt ipsam expedita unde obcaecati alias voluptatem architecto aut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore architecto officia nulla laboriosam quia atque animi esse aperiam in itaque! Assumenda veritatis sed eveniet esse ea. Veniam nobis est id.</p>
+      <img src="http://placehold.it/300x150" alt="">
+    </div>
+    <div class="card">
+      <h2>Card #02</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <img src="http://placehold.it/300x150" alt="">
+    </div>
+    <div class="card">
+      <h2>Card #03</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur recusandae temporibus molestiae architecto perferendis accusamus ut mollitia consectetur. Magnam, saepe quidem soluta temporibus sit a porro id alias! Illum, hic.</p>
+      <img src="http://placehold.it/300x150" alt="">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+    }
+    h1,h2,h3,h4,h5,h6{
+      margin: 0;
+    }
+    header,.banner,nav,article{
+      padding: 30px;
+      text-transform: capitalize;
+    }
+    .container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    header{
+      background-color: yellow;
+    }
+    .banner{
+      background-color: yellowgreen;
+    }
+    section{
+      display: flex;
+      flex: 1;
+    }
+    nav{
+      background-color: palevioletred;
+      width: 100px;
+    }
+    article{
+      background-color: skyblue;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>header</h2>
+    </header>
+    <div class="banner">
+      <h2>banner</h2>
+    </div>
+    <section>
+      <nav>
+        <h2>navi</h2>
+      </nav>
+      <article>
+        <h2>Main</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam quam error provident minus unde est magni molestiae tenetur suscipit voluptate dolore, ipsa architecto voluptatibus modi laudantium nobis sapiente! Provident, repellat.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section{
+      /* border: 3px solid black; */
+      /* 보통 컨텐츠 영역은 1200px ~ 1300px */
+      width: 1200px;
+      display: flex;
+    }
+    article{
+      flex: 1;
+    }
+    article h2, article p{
+      padding: 0 10px;
+    }
+    
+    .content1{
+      background-color: yellow;
+      text-align: left;
+    }
+    .content2{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    } 
+    .sub1{
+      background-color: lightskyblue;
+    } 
+    .sub2{
+      background-color: tomato;
+    }
+
+    @media(max-width: 768px){
+      body{
+        align-items: flex-start;
+      }
+      section{
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <article class="content1">
+      <h2>content1</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, eaque sint! Corrupti officia totam porro veritatis vero, mollitia expedita odit animi quisquam voluptates accusamus repudiandae dolorem, corporis saepe optio quam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, eaque sint! Corrupti officia totam porro veritatis vero, mollitia expedita odit animi quisquam voluptates accusamus repudiandae dolorem, corporis saepe optio quam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, eaque sint! Corrupti officia totam porro veritatis vero, mollitia expedita odit animi quisquam voluptates accusamus repudiandae dolorem, corporis saepe optio quam.</p>
+    </article>
+
+    <article class="content2">
+      <div class="sub1">
+        <h2>sub1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur architecto officiis. Odio rerum reprehenderit nobis dicta tempora vero non nostrum excepturi. Hic molestiae recusandae totam ex? Illum, praesentium similique?</p>
+      </div>
+
+      <div class="sub2">
+        <h2>sub2</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium quam quis hic fugit id, ratione doloribus unde alias perferendis tempora vero assumenda beatae ullam neque est nisi, dolores natus?</p>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
