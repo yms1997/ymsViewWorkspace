@@ -1,0 +1,30 @@
+@media(max-width:768px){
+  /* width 고정 ==> 100% */
+  /* row -> column */
+  .inner{
+    width: 100%;
+  }
+  header{
+    width: 100%;
+  }
+  .intro{
+    flex-direction: column;
+  }
+  .about-content{
+    flex-direction: column;
+  }
+  .items{
+    flex-direction: column;
+    align-items: center;
+  }
+  .client{
+    flex-direction: column;
+  }
+  .festival{
+    flex-direction: column;
+  }
+  .footer-content{
+    flex-direction: column;
+    
+  }
+}

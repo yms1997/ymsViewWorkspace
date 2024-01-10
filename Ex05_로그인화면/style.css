@@ -6,11 +6,11 @@ a{ text-decoration: none; color: #222;}
 h1,h2,h3,h4,h5,h6{ margin: 0; font-weight: normal;}
 button{ cursor: pointer; outline: none; border: none;}
 /* body font-fmaily를 상속받지 않는 태그들  */
-button,input,textarea{ font-family: 'Montserrt', sans-serif;}
+button,input,textarea{ font-family: 'Montserrat', sans-serif;}
 body{
   margin: 0;
   height: 100vh;
-  font-family: 'Montserrt', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 main{
   height: 100%;

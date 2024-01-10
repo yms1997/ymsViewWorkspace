@@ -1,0 +1,122 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* reset CSS */
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{ margin: 0; font-weight: normal;}
+button{ cursor: pointer; outline: none; border: none;}
+input,textarea,select{
+  outline: none;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat' , sans-serif;
+  /* font-family: 'Noto Sans KR' , sans-serif; */
+}
+button,input,textarea,select{
+  /* font-family: 'Noto Sans KR' , sans-serif; */
+  font-family: 'Montserrat' , sans-serif;
+}
+
+main{
+  width: 1000px;
+  margin: auto;
+  display: flex;
+}
+
+/* post */
+.post{
+  display: flex;
+}
+.post:nth-child(odd){
+  flex-direction: column;
+}
+.post:nth-child(even){
+  flex-direction: column-reverse;
+}
+
+/* desc */
+.desc{
+  height: 250px;
+  background-color: lightseagreen;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desc h2{
+  font-weight: bold;
+  padding-top: 10px;
+}
+.desc p{
+  padding: 20px;
+}
+
+
+/* imgs */
+.imgs{
+  width: 250px;
+  overflow: hidden;
+}
+/* img 인라인 블럭 -> 자체적으로 마진이 있다 */
+.imgs img{
+  display: block;
+  width: 100%;
+  transition-duration: 0.7s;
+  /* margin-bottom: 10px; */
+}
+.imgs img:hover{
+  transform: scale(1.05);
+}
+
+@media (min-width:768px) and (max-width:1024px){
+  main{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .post:nth-child(odd){
+    flex-direction: row;
+  }
+  .post:nth-child(even){
+    flex-direction: row-reverse;
+  }
+  .desc, .imgs{
+    flex: 1;
+    height: 100%;
+  }
+}
+/* 화면 분할은 ctrl + 역슬러쉬 */
+@media screen and (max-width:767px) {
+  main{
+    width: 100%;
+    /* padding: 30px; */
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  /* .post{
+    flex-direction: column !important;
+  } */
+  .post:nth-child(odd){
+    flex-direction: column;
+  }
+  .post:nth-child(even){
+    flex-direction: column;
+  }
+  .imgs{
+    height: auto;
+    width: 100%;
+  }
+
+  .desc{
+    width: 100%;
+  }
+}
