@@ -23,6 +23,10 @@
   .festival{
     flex-direction: column;
   }
+  .bnts a{
+    display: block;
+    width: 100%;
+  }
   .footer-content{
     flex-direction: column;
     

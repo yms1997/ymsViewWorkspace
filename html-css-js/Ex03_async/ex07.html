@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머</title>
+  <style>
+      main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .timer {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          height: 150px;
+          font-size: 100px;
+          font-weight: bold;
+          color: #222222;
+      }
+  </style>
+</head>
+
+<body>
+<main>
+  <div class="timer">
+    <div class="second"></div>
+  </div>
+</main>
+</body>
+
+</html>
+
+<script>
+  const sec = document.querySelector('.second');
+  let totalTime = 1000;
+  let oldTime = new Date().getTime();
+
+  let timerId = setInterval(() => {
+    let currentTime = new Date().getTime();
+    let diff = currentTime - oldTime;
+    let remainSec = totalTime - diff;
+    remainSec = (remainSec/1000).toFixed(2);
+    let label = `${remainSec}초`;
+    if(remainSec <= 0){
+        clearInterval(timerId);
+        label = `${totalTime/1000}초가 지났습니다`
+    }
+    sec.innerHTML = label;
+  }, 10)
+</script>

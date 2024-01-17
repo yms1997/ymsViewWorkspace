@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <button class="btn">네모 움직여</button>
+</body>
+
+</html>
+
+<script>
+  const box = document.querySelector('.box');
+  const btn = document.querySelector('.btn');
+  // btn.addEventListener("click", () => {
+  //   alert("test");
+  //   const box = document.getElementsByClassName('box');
+  //   box.style.transform = 'translateX(200px)';
+  // })
+  // function clicked(){
+  //   const box = document.querySelector('.box');
+  //   box.style.transform = 'translateX(200px)'; // transform : translateX(200px);
+  //   box.style.transition = '2s';
+  //   btn.textContent = "네모 돌아와";
+
+  //   // innerHTML vs textContent
+  //   // innerHTML -> DOM tree 다시 생성
+  //   // textContent -> 부분적으로 해당 요소만 리렌더링 리페인팅 됨
+  //   // tex 변동이 많으면 textContent를 사용하는 것이 더 낫다
+  // }
+
+    let isChecked = true;
+
+  // btn.addEventListener("click", () => {
+  //   const box = document.querySelector('.box');
+  //   box.style.transform = 'translateX(200px)';
+  //   box.style.transition = '2s';
+  //   btn.textContent = "네모 돌아와";
+  // })
+  // btn.addEventListener("click", () => {
+  //   const box = document.querySelector('.box');
+  //   box.style.transform = 'translateX(0px)';
+  //   box.style.transition = '2s';
+  //   btn.textContent = "네모 움직여";
+  // })
+
+    btn.addEventListener("click", () => {
+      isChecked ? moveBox() : combackBox();
+    })
+
+  function moveBox(){
+    const box = document.querySelector('.box');
+    box.style.transform = 'translateX(200px)';
+    box.style.transition = '2s';
+    btn.textContent = "네모 돌아와";
+    isChecked = !isChecked
+  }
+  function combackBox(){
+    const box = document.querySelector('.box');
+    box.style.transform = 'translateX(0px)';
+    box.style.transition = '2s';
+    btn.textContent = "네모 움직여";
+    isChecked = !isChecked;
+  }
+
+</script>
